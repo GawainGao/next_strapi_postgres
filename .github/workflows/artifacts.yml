@@ -20,6 +20,8 @@ jobs:
             !dist/**/*.md
       - name: Archive code coverage results
         uses: actions/upload-artifact@v2
+        run: |
+          echo Hello, world!
         with:
           name: code-coverage-report
           path: output/test/code-coverage.html
