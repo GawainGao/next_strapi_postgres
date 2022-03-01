@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: npm install, build, and test
         run: |
-          echo Hello, world!
+          echo Hello, world! > test.md
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
@@ -20,8 +20,6 @@ jobs:
             !dist/**/*.md
       - name: Archive code coverage results
         uses: actions/upload-artifact@v2
-        run: |
-          echo Hello, world!
         with:
           name: code-coverage-report
           path: output/test/code-coverage.html
